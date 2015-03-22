@@ -14,9 +14,9 @@
             this.tab = selected;  
         };
         
-        this.isSet = function(selected)
+        this.isSet = function(checkTab)
         {
-            return this.tab;  
+            return this.tab === checkTab;  
         };
     });
   
@@ -29,7 +29,8 @@
             "img/tshirt1.jpg",
             "img/tshirt2.jpg",
             "img/tshirt3.jpg"
-            ]
+            ],
+            spec: "Size: S,M,L,XL"
             },
             { name: 'Gryffindor scarf', 
             price: 4.95,
@@ -39,7 +40,8 @@
             "img/scarf1.jpg",
             "img/scarf2.jpg",
             "img/scarf3.jpg"
-             ]
+             ],
+            spec: "Size: S,XL"
             },
             { name: 'Cup', 
             price: 2,
@@ -49,7 +51,8 @@
             "img/cup1.jpg",
             "img/cup2.jpg",
             "img/cup3.jpg"
-             ]
+             ],
+            spec: "Nothing here"
             }
   ];
     

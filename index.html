@@ -20,8 +20,26 @@
                 <img ng-src="{{image}}" width="100" heigth="100"> 
             </ul>
           </div>
+          
+        <section class="tab" ng-controller="PanelController as panel">
+            <ul class="nav nav-pills">
+                <li ng-class="{ active: panel.isSet(1) }">
+                <a href ng-click="panel.setTab(1)">Description</a></li>
+                <li ng-class="{ active: panel.isSet(2) }">
+                <a href ng-click="panel.setTab(2)">Specs</a></li>
+            </ul>  
+            
+            <div ng-show="panel.isSet(1)">
+            <h4>Description</h4>
+                <blockquote>{{product.description}}</blockquote>
+            </div>
+            <div ng-show="panel.isSet(2)">
+                <h4>Specs</h4>
+                <blockquote>{{product.spec}}</blockquote>
+            </div>
+        </section>
+          
         <div align="center">
-            <h3>{{product.description}}</h3>
             <button ng-show='product.canPurchase'> Add to cart!</button>
         </div>
     </div>

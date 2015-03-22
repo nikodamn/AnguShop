@@ -8,12 +8,22 @@
   <body class="list-group" ng-controller="StoreController as store">
       <div class="list-group-item" ng-repeat="product in store.products">
         <h1>
-        {{product.name}} 
-            {{ product.price | currency }}
-        </h1>
-        <img ng-src="{{product.images[0]}}" width="300" height="300"/>
-        <p>{{product.description}}</p>
-          <button ng-show='product.canPurchase'> Add to cart!</button>
-      </div>
+        {{product.name}}
+           <em class="pull-right"> {{ product.price | currency }} </em>
+        </h1>  
+          <div class="gallery" align="center">
+              <div class="img-wrap" align="center">
+                <img ng-src="{{product.images[0]}}" width="300" heigth="300"/>
+              </div>
+            <ul class="img-thumbnails clearfix">
+                <li class="small-image pull-left thumbnail" align="center" ng-repeat="image in product.images">
+                <img ng-src="{{image}}" width="100" heigth="100"> 
+            </ul>
+          </div>
+        <div align="center">
+            <h3>{{product.description}}</h3>
+            <button ng-show='product.canPurchase'> Add to cart!</button>
+        </div>
+    </div>
   </body>
 </html>

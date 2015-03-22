@@ -13,7 +13,8 @@
             canPurchase: true,
             images: [
             "img/tshirt1.jpg",
-            "img/tshit2.jpg"
+            "img/tshirt2.jpg",
+            "img/tshirt3.jpg"
             ]
             },
             { name: 'Gryffindor scarf', 
@@ -22,7 +23,8 @@
             canPurchase: false,
             images: [
             "img/scarf1.jpg",
-            "img/scarf2.jpg"
+            "img/scarf2.jpg",
+            "img/scarf3.jpg"
              ]
             },
             { name: 'Cup', 
@@ -30,8 +32,9 @@
             description: 'Just classy.',
             canPurchase: true,
             images: [
-             "img/cup1.jpg",
-             "img/cup2.jpg"
+            "img/cup1.jpg",
+            "img/cup2.jpg",
+            "img/cup3.jpg"
              ]
             }
   ];

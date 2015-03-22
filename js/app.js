@@ -1,12 +1,26 @@
 (function(){
     
-  var app = angular.module('store', []);
+    var app = angular.module('store', []);
   
-  app.controller('StoreController',function(){
-    this.products = gems;
-  });
+    app.controller('StoreController',function(){
+        this.products = gems;
+    });
+    
+    app.controller('PanelController', function(){
+        this.tab = 1; //init
+        
+        this.setTab = function(selected)
+        {
+            this.tab = selected;  
+        };
+        
+        this.isSet = function(selected)
+        {
+            return this.tab;  
+        };
+    });
   
-      var gems = [
+    var gems = [
             { name: 'T-shirt', 
             price: 9.95,
             description: 'Everyone loves T-shirts!',

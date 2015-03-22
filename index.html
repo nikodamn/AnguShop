@@ -11,7 +11,7 @@
         {{product.name}}
            <em class="pull-right"> {{ product.price | currency }} </em>
         </h1>  
-          <div class="gallery" align="center">
+          <div class="gallery" align="center" ng-show="product.images.length">
               <div class="img-wrap" align="center">
                 <img ng-src="{{product.images[0]}}" width="300" heigth="300"/>
               </div>
